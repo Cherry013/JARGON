@@ -1,0 +1,26 @@
+#! note start <bg=black,fg=blue,title="Creation">
+- Create unique namespaces for all cgroup, code execution, network etc with a unique user named "JARGON".
+- Only JARGON can read/write inside this namespace; JARGON has no access outside.
+- Write a Java XML parser.
+- Write a Spring Boot REST API to send XML with image details.
+- Download a base image from Docker Hub and de-tar the image.
+- Run the commands from the XML file inside the namespace.
+#! note end <>
+
+#! note start <bg=black,fg=green,title="Maintenance">
+- Update image details in backend via the REST API and add into `images` table.
+- Store details in a database (SQL or NoSQL).
+- Program updates status each time state changes.
+- On run, insert those details into `containers` table.
+- Each container must store logs.
+- All containers should talk to the each other and to the native system.
+- All containers should not have read or write permission outside there namespace directories.
+#! note end <>
+
+#! note start <bg=black,fg=yellow,title="Extra Features">
+- Extend monitoring (metrics, alerts).
+- Implement authentication for REST API.
+- Support multiple concurrent namespaces/containers.
+- Optionally add a UI to view images, containers, logs.
+#! note end <>
+To access the diagram for this project go to this link: https://excalidraw.com/#json=IMvlp5laFBNdhAzt1R5Wq,mg1AgfleN5r_4jw3yInMcA
